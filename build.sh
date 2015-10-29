@@ -24,6 +24,8 @@ build() {
 	fi
 }
 
+go generate ./...
+
 for goos in linux darwin windows freebsd openbsd netbsd solaris ; do
 	build "$goos" amd64
 done
